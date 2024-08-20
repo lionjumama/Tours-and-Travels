@@ -2,12 +2,16 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-md mt-4"> 
+    <header className="bg-[#FFFFFF] shadow-md mt-4"> 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16"> {/* Added items-center */}
           {/* Logo/Brand */}
-          <div className="flex-shrink-0">
-            <a href="/" className="text-xl font-bold text-blue-600">SafarShandar Travels</a>
+          <div className="flex-shrink-0 flex items-center">
+            <a href="/" className="flex items-center space-x-2">
+              {/* Logo Placeholder */}
+              <img src="/logo.png" alt="Logo" className="h-12 w-auto " />
+              <span className="text-xl font-bold text-blue-600">SafarShandar Travels</span>
+            </a>
           </div>
           
           {/* Navigation Links */}
