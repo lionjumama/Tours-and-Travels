@@ -8,6 +8,6 @@ export default defineConfig({
       usePolling: true, // This helps in environments where file changes are not detected automatically
     },
     host: true, // This ensures it works across different networks (like LAN)
-    port: 3000, // Set a specific port if needed
+    port: 2169, // Set a specific port if needed
   },
 })

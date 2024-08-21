@@ -1,7 +1,7 @@
 const express = require('express');
 const connectDB = require('./Library/database');
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 // Connect to MongoDB
 connectDB();
@@ -10,7 +10,7 @@ connectDB();
 app.use(express.json());
 
 // Define routes
-app.use('/api/travel', require('./Routers/travelRouter'));
+app.use('/api/travel', require('./Routers/api.js'));
 
 // Root route
 app.get('/', (req, res) => {

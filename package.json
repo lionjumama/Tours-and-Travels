@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Tours-and-Travels - A web application designed to streamline travel bookings with a powerful Node.js and MongoDB backend. It ensures a seamless user experience through a modern, responsive frontend. Perfect for efficiently managing tours, accommodations, and travel itineraries.",
   "devDependencies": {
     "concurrently": "^8.2.2",
     "npm-run-all": "^4.1.5"
