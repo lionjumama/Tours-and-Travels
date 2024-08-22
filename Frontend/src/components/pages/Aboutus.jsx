@@ -13,26 +13,26 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Team Member 1 */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-2">Benukar Pal</h3>
-              <p className="text-lg">Position or role description</p>
+              <h3 className="text-2xl font-semibold mb-2">Vishal Singh</h3>
+              <p className="text-lg">FullStack Development</p>
             </div>
             
             {/* Team Member 2 */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold mb-2">Kamlesh Kumar</h3>
-              <p className="text-lg">Position or role description</p>
+              <p className="text-lg">Backend Development</p>
             </div>
             
             {/* Team Member 3 */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-2">Chirag Yadav</h3>
-              <p className="text-lg">Position or role description</p>
+              <h3 className="text-2xl font-semibold mb-2">Chirag Sharma</h3>
+              <p className="text-lg">Frontend Development</p>
             </div>
 
             {/* Team Member 4 */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-2">Sujal</h3>
-              <p className="text-lg">Position or role description</p>
+              <h3 className="text-2xl font-semibold mb-2">Veer Singh Sodhi</h3>
+              <p className="text-lg">Resources collector</p>
             </div>
           </div>
         </div>

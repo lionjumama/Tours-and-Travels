@@ -49,7 +49,7 @@ const Body = () => {
       {/* Card 1 - What We Offers */}
       <section className="bg-yellow-100 py-16">
   <div className="max-w-6xl mx-auto px-4">
-    <h2 className="text-4xl font-bold text-center mb-12 text-yellow-800">What We Offer Our Best Services</h2>
+    <h2 className="text-4xl font-bold text-center mb-12 text-yellow-800">We We Offer Our Best Services</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {/* Card 1 - Best Tour Guide */}
       <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
