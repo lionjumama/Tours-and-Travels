@@ -10,6 +10,7 @@ import SpecialOffers from './components/pages/SpecialOffers';
 import Tours from './components/pages/Tours';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
+import FeaturedTourPlans from './components/FeaturedTourPlans';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/tours" element={<Tours />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/featured" element={<FeaturedTourPlans />} />
 
       </Routes>
       <Footer />

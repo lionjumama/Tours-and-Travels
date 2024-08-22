@@ -1,4 +1,5 @@
 import React from 'react';
+import FeaturedTourPlans from './FeaturedTourPlans';
 
 const Body = () => {
   return (
@@ -31,65 +32,85 @@ const Body = () => {
               <img src="/src/assets/images/hero-img01.jpg" alt="Tour 1" className="w-full h-full object-cover" />
             </div>
 
-            {/* Card 2 - Image */}
+            {/* Card 2 - Video */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <video controls className="w-full h-full object-cover">
                 <source src="/src/assets/images/hero-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
-            {/* Card 3 - Video */}
-           
+
+            {/* Card 3 - Image */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img src="/src/assets/images/hero-img02.jpg" alt="Tour 2" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
       </section>
-      {/* Card 1 - What We Offers */}
+
+      {/* What We Offer */}
       <section className="bg-yellow-100 py-16">
-  <div className="max-w-6xl mx-auto px-4">
-    <h2 className="text-4xl font-bold text-center mb-12 text-yellow-800">We We Offer Our Best Services</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {/* Card 1 - Best Tour Guide */}
-      <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
-        <div className="bg-yellow-500 p-4 rounded-full mb-4">
-          <svg className="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2a5 5 0 00-5 5v4a5 5 0 005 5 5 5 0 005-5V7a5 5 0 00-5-5zm-3 5a3 3 0 116 0v4a3 3 0 01-6 0V7zm6 12H9a3 3 0 00-3 3v1h12v-1a3 3 0 00-3-3z" />
-          </svg>
-        </div>
-        <h3 className="text-xl font-semibold mb-2">Best Tour Guide</h3>
-        <p>Our expert guides ensure a rich and immersive experience, providing insightful information and a personalized touch to every tour.</p>
-      </div>
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-yellow-800">We Offer Our Best Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1 - Best Tour Guide */}
+            <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+              <div className="bg-yellow-500 p-4 rounded-full mb-4">
+                <svg className="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2a5 5 0 00-5 5v4a5 5 0 005 5 5 5 0 005-5V7a5 5 0 00-5-5zm-3 5a3 3 0 116 0v4a3 3 0 01-6 0V7zm6 12H9a3 3 0 00-3 3v1h12v-1a3 3 0 00-3-3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Best Tour Guide</h3>
+              <p>Our expert guides ensure a rich and immersive experience, providing insightful information and a personalized touch to every tour.</p>
+            </div>
 
-      {/* Card 2 - Cheapest Tours */}
-      <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
-        <div className="bg-yellow-500 p-4 rounded-full mb-4">
-          <svg className="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2a5 5 0 00-5 5v4a5 5 0 005 5 5 5 0 005-5V7a5 5 0 00-5-5zm-3 5a3 3 0 116 0v4a3 3 0 01-6 0V7zm6 12H9a3 3 0 00-3 3v1h12v-1a3 3 0 00-3-3z" />
-          </svg>
-        </div>
-        <h3 className="text-xl font-semibold mb-2">Cheapest Tours</h3>
-        <p>Enjoy our affordable tour packages without compromising on quality. We offer the best deals to suit every budget.</p>
-      </div>
+            {/* Card 2 - Cheapest Tours */}
+            <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+              <div className="bg-yellow-500 p-4 rounded-full mb-4">
+                <svg className="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2a5 5 0 00-5 5v4a5 5 0 005 5 5 5 0 005-5V7a5 5 0 00-5-5zm-3 5a3 3 0 116 0v4a3 3 0 01-6 0V7zm6 12H9a3 3 0 00-3 3v1h12v-1a3 3 0 00-3-3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Cheapest Tours</h3>
+              <p>Enjoy our affordable tour packages without compromising on quality. We offer the best deals to suit every budget.</p>
+            </div>
 
-      {/* Card 3 - Full Plan of Tours */}
-      <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
-        <div className="bg-yellow-500 p-4 rounded-full mb-4">
-          <svg className="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2a5 5 0 00-5 5v4a5 5 0 005 5 5 5 0 005-5V7a5 5 0 00-5-5zm-3 5a3 3 0 116 0v4a3 3 0 01-6 0V7zm6 12H9a3 3 0 00-3 3v1h12v-1a3 3 0 00-3-3z" />
-          </svg>
+            {/* Card 3 - Full Plan of Tours */}
+            <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+              <div className="bg-yellow-500 p-4 rounded-full mb-4">
+                <svg className="h-12 w-12 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2a5 5 0 00-5 5v4a5 5 0 005 5 5 5 0 005-5V7a5 5 0 00-5-5zm-3 5a3 3 0 116 0v4a3 3 0 01-6 0V7zm6 12H9a3 3 0 00-3 3v1h12v-1a3 3 0 00-3-3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Full Plan of Tours</h3>
+              <p>We provide comprehensive tour plans with all details covered. From itineraries to accommodations, everything is well-organized.</p>
+            </div>
+          </div>
         </div>
-        <h3 className="text-xl font-semibold mb-2">Full Plan of Tours</h3>
-        <p>We provide comprehensive tour plans with all details covered. From itineraries to accommodations, everything is well-organized.</p>
-      </div>
+      </section>
+{/* Search Bar Section */}
+<section className="bg-white py-16">
+  <div className="max-w-4xl mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-8">Search for Tours</h2>
+    <div className="relative">
+      <input
+        type="text"
+        placeholder="Search for a tour..."
+        className="w-full p-4 pl-10 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <svg className="absolute top-1/2 left-3 transform -translate-y-1/2 h-6 w-6 text-gray-500 hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M13 10a3 3 0 100-6 3 3 0 000 6zM10 10a6 6 0 1111.55 6" />
+      </svg>
     </div>
   </div>
 </section>
+{/* Featured tours Section */}
+<FeaturedTourPlans />
 
     </main>
   );
 };
 
 export default Body;
+
 
