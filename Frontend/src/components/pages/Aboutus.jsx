@@ -1,4 +1,5 @@
 import React from 'react';
+import RatingsAndReviews from '../RatingsAndReviews';
 
 const AboutUs = () => {
   return (
@@ -13,7 +14,7 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Team Member 1 */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-2">Vishal Singh</h3>
+              <h3 className="text-2xl font-semibold mb-2">Benukar Pal</h3>
               <p className="text-lg">FullStack Development</p>
             </div>
             
@@ -36,7 +37,9 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+       
       </section>
+      <RatingsAndReviews />
     </main>
   );
 };

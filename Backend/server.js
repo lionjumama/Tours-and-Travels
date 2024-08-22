@@ -1,20 +1,24 @@
 const express = require('express');
-const connectDB = require('./Library/database');
+require('dotenv').config();
+const mongoose = require('mongoose');
+const authRoutes = require('./Routers/authRoutes');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Connect to MongoDB
-connectDB();
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
 
 // Middleware
 app.use(express.json());
 
 // Define routes
-app.use('/api/travel', require('./Routers/api.js'));
+app.use('/api/auth', authRoutes);
 
 // Root route
 app.get('/', (req, res) => {
-  res.send('Welcome to the Tours and Travels API');
+  res.send('Welcome to the Tours and Travels API Baby');
 });
 
 app.listen(PORT, () => {

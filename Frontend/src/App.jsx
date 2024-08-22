@@ -8,6 +8,8 @@ import Book from './components/pages/Book';
 import ContactUs from './components/pages/ContactUs';
 import SpecialOffers from './components/pages/SpecialOffers';
 import Tours from './components/pages/Tours';
+import Login from './components/pages/Login';
+import Register from './components/pages/Register';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/specialoffers" element={<SpecialOffers />} />
         <Route path="/tours" element={<Tours />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
       </Routes>
       <Footer />
     </Router>

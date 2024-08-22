@@ -88,7 +88,7 @@ const Footer = () => {
               <a href="/login">Login</a>
             </li>
             <li className="hover:text-blue-500 mb-2">
-              <a href="/register">Register</a>
+              <a href="/Register">Register</a>
             </li>
           </ol>
         </div>
@@ -110,7 +110,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center hover:text-blue-500">
             <FaMapMarkerAlt className="mr-2" /> 
-            <span>123, Main Street, New Delhi, India</span>
+            <span>394210, Surat, Gujrat, India</span>
           </div>
         </div>
       </div>
