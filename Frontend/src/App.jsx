@@ -1,14 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer';
-import Body from './components/Body';
-import Home from './assets/pages/Home';
-import Aboutus from './assets/pages/Aboutus';
-import Book from './assets/pages/Book';
-import ContactUs from './assets/pages/ContactUs';
-import SpecialOffers from './assets/pages/SpecialOffers';
-import Tours from './assets/pages/Tours';
+import Footer from './components/Footer'
+import Home from './components/pages/Home';
+import Aboutus from './components/pages/Aboutus';
+import Book from './components/pages/Book';
+import ContactUs from './components/pages/ContactUs';
+import SpecialOffers from './components/pages/SpecialOffers';
+import Tours from './components/pages/Tours';
 
 function App() {
   return (
@@ -22,11 +21,11 @@ function App() {
         <Route path="/specialoffers" element={<SpecialOffers />} />
         <Route path="/tours" element={<Tours />} />
       </Routes>
-      <Body />
       <Footer />
     </Router>
   );
 }
 
 export default App;
+
 

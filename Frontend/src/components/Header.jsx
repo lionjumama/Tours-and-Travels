@@ -1,33 +1,76 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16"> {/* Added items-center */}
+        <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="/" className="flex items-center space-x-2">
-              {/* Logo Placeholder */}
-              <img src="/logo.png" alt="Logo" className="h-12 w-auto " />
+            <NavLink to="/" className="flex items-center space-x-2">
+              <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
               <span className="text-xl font-bold text-blue-600">SafarShandar Travels</span>
-            </a>
+            </NavLink>
           </div>
           
           {/* Navigation Links */}
-          <div className="hidden md:flex space-x-10"> {/* Removed extra items-center */}
-            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
-            <a href="/about" className="text-gray-700 hover:text-blue-600">About Us</a>
-            <a href="/tours" className="text-gray-700 hover:text-blue-600">Tours</a>
-            <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact Us</a>
-            <a href="/offers" className="text-gray-700 hover:text-blue-600">Special Offers</a>
+          <div className="hidden md:flex space-x-10 relative">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `relative ${isActive ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600`
+              }
+            >
+              Home
+              {({ isActive }) => isActive && <span className="absolute inset-x-0 bottom-0 h-1 bg-blue-600" />}
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `relative ${isActive ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600`
+              }
+            >
+              About Us
+              {({ isActive }) => isActive && <span className="absolute inset-x-0 bottom-0 h-1 bg-blue-600" />}
+            </NavLink>
+            <NavLink
+              to="/tours"
+              className={({ isActive }) =>
+                `relative ${isActive ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600`
+              }
+            >
+              Tours
+              {({ isActive }) => isActive && <span className="absolute inset-x-0 bottom-0 h-1 bg-blue-600" />}
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `relative ${isActive ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600`
+              }
+            >
+              Contact Us
+              {({ isActive }) => isActive && <span className="absolute inset-x-0 bottom-0 h-1 bg-blue-600" />}
+            </NavLink>
+            <NavLink
+              to="/specialoffers"
+              className={({ isActive }) =>
+                `relative ${isActive ? 'text-blue-600' : 'text-gray-700'} hover:text-blue-600`
+              }
+            >
+              Special Offers
+              {({ isActive }) => isActive && <span className="absolute inset-x-0 bottom-0 h-1 bg-blue-600" />}
+            </NavLink>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <a href="/book" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            <NavLink
+              to="/book"
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            >
               Book Now
-            </a>
+            </NavLink>
           </div>
 
           {/* Hamburger Menu for Mobile */}
@@ -45,4 +88,7 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
 
