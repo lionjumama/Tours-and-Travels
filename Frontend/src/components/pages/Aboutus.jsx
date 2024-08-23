@@ -35,6 +35,12 @@ const AboutUs = () => {
               <h3 className="text-2xl font-semibold mb-2">Veer Singh Sodhi</h3>
               <p className="text-lg">Resources collector</p>
             </div>
+
+            {/* Team Member 5 */}
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-semibold mb-2">Krushna Parate</h3>
+              <p className="text-lg">Resources collector</p>
+            </div>
           </div>
         </div>
        

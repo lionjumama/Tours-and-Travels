@@ -11,6 +11,8 @@ import Tours from './components/pages/Tours';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import FeaturedTourPlans from './components/FeaturedTourPlans';
+import Experience from './components/Experience';
+import Gallery from './components/Gallery';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/featured" element={<FeaturedTourPlans />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/gallery" element={<Gallery />} />
 
       </Routes>
       <Footer />

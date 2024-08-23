@@ -2,6 +2,8 @@ const express = require('express');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const authRoutes = require('./Routers/authRoutes');
+const bodyParser = require('body-parser');
+const emailRoutes = require('./Controller/email');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -10,6 +12,8 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
+  app.use(bodyParser.json());
+app.use(emailRoutes);
 // Middleware
 app.use(express.json());
 

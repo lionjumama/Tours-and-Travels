@@ -15,6 +15,7 @@ const Footer = () => {
             <li><p>Kamlesh Kumar</p></li>
             <li><p>Chirag Yadav</p></li>
             <li><p>Veer Singh Sodhi</p></li>
+            <li><p>Krushna Parate</p></li>
           </ul>
         </div>
 
@@ -82,7 +83,7 @@ const Footer = () => {
           <hr className="border-gray-700 w-full mb-4" />
           <ol className="font-mono">
             <li className="hover:text-blue-500 mb-2">
-              <a href="/gallery">Gallery</a>
+              <a href="/Gallery">Gallery</a>
             </li>
             <li className="hover:text-blue-500 mb-2">
               <a href="/login">Login</a>

@@ -1,5 +1,7 @@
 import React from 'react';
 import FeaturedTourPlans from './FeaturedTourPlans';
+import Experience from './Experience';
+import Gallery from './Gallery';
 
 const Body = () => {
   return (
@@ -106,6 +108,8 @@ const Body = () => {
 </section>
 {/* Featured tours Section */}
 <FeaturedTourPlans />
+<Experience />
+<Gallery />
 
     </main>
   );
