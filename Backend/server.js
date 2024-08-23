@@ -3,7 +3,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const authRoutes = require('./Routers/authRoutes');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
