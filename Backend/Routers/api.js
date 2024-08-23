@@ -1,4 +1,5 @@
 const express = require('express');
+const bcrypt = require('bcryptjs'); // Import bcrypt for password hashing
 const User = require('../Models/User'); // Ensure this path is correct
 const router = express.Router();
 
@@ -13,16 +14,26 @@ router.post('/register', async (req, res) => {
       return res.status(400).json({ message: 'User already exists' });
     }
 
-    // Create a new user
-    user = new User({ username, email, phone, password });
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Create a new user with hashed password
+    user = new User({
+      username,
+      email,
+      phone,
+      password: hashedPassword, // Save the hashed password
+    });
+
     await user.save();
 
     res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
-    console.error('Error registering user:', error);
+    console.error('Error registering user:', error); // Log the error for debugging
     res.status(500).json({ message: 'Server error' });
   }
 });
 
 module.exports = router;
+
 

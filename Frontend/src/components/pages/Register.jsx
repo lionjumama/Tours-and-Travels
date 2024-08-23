@@ -7,6 +7,7 @@ const Register = () => {
     username: '',
     email: '',
     phone: '',
+    password: '',
     captcha: ''
   });
   const [captchaCode, setCaptchaCode] = useState('');
@@ -24,11 +25,11 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (formData.captcha !== captchaCode) {
       return setErrorMessage('Captcha is incorrect');
     }
-
+  
     try {
       const response = await fetch('/api/auth/register', {
         method: 'POST',
@@ -37,7 +38,7 @@ const Register = () => {
         },
         body: JSON.stringify(formData),
       });
-
+  
       const result = await response.json();
       if (response.ok) {
         alert('Registration successful');
@@ -50,6 +51,7 @@ const Register = () => {
       setErrorMessage('Registration failed');
     }
   };
+  
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
@@ -62,7 +64,7 @@ const Register = () => {
             className="w-full"
           />
         </div>
-        
+
         {/* Right Side: Form */}
         <div className="w-1/2 p-8">
           <h2 className="text-3xl font-bold mb-6 text-center text-orange-500">Register</h2>
@@ -100,6 +102,18 @@ const Register = () => {
                 onChange={handleChange}
                 className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
                 placeholder="Phone Number"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+                placeholder="Password"
                 required
               />
             </div>

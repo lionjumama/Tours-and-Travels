@@ -1,6 +1,6 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
-const User = require('../Models/User');
+const bcrypt = require('bcryptjs'); // Ensure bcryptjs is installed
+const User = require('../Models/User'); // Ensure this path is correct
 
 const router = express.Router();
 
@@ -8,6 +8,11 @@ const router = express.Router();
 router.post('/register', async (req, res) => {
   try {
     const { username, email, phone, password } = req.body;
+
+    // Basic validation
+    if (!username || !email || !phone || !password) {
+      return res.status(400).json({ message: 'All fields are required' });
+    }
 
     // Check if user already exists
     const existingUser = await User.findOne({ email });
@@ -30,7 +35,8 @@ router.post('/register', async (req, res) => {
 
     res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
-    res.status(500).json({ message: 'Server error' });
+    console.error('Error registering user:', error); // Log the error for debugging
+    res.status(500).json({ message: 'Server error', error: error.message }); // Return detailed error
   }
 });
 
@@ -40,7 +46,8 @@ router.get('/users', async (req, res) => {
     const users = await User.find();
     res.status(200).json(users);
   } catch (error) {
-    res.status(500).json({ message: 'Server error' });
+    console.error('Error fetching users:', error); // Log the error for debugging
+    res.status(500).json({ message: 'Server error', error: error.message }); // Return detailed error
   }
 });
 
