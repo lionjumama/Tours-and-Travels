@@ -4,8 +4,16 @@ const mongoose = require('mongoose');
 const authRoutes = require('./Routers/authRoutes');
 const emailRoutes = require('./Controller/email');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const corsOptions = {
+  origin: "http://localhost:2170",
+  methods:"GET,POST,PUT,DELETE,PATCH,HEAD",
+  credentials:true
+};
+app.use(cors(corsOptions));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)

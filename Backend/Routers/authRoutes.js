@@ -1,9 +1,10 @@
 const express = require('express');
 const bcrypt = require('bcryptjs'); // Ensure bcryptjs is installed
 const User = require('../Models/User'); // Ensure this path is correct
-
+const authController = require("../Controller/authController");
 const router = express.Router();
 
+router.route('/login').post(authController.signIn);
 // Route to register a new user
 router.post('/register', async (req, res) => {
   try {
