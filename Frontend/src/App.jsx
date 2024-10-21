@@ -8,7 +8,7 @@ import Book from './components/pages/Book';
 import ContactUs from './components/pages/ContactUs';
 import SpecialOffers from './components/pages/SpecialOffers';
 import Tours from './components/pages/Tours';
-import Login from './components/pages/Login';
+import Login from './components/pages/login';
 import Register from './components/pages/Register';
 import FeaturedTourPlans from './components/FeaturedTourPlans';
 import Experience from './components/Experience';
