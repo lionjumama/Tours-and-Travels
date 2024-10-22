@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactStars from 'react-rating-stars-component';
 
 const RatingsAndReviews = () => {
   const [rating, setRating] = useState(0);
   const [reviews, setReviews] = useState([]);
   const [reviewText, setReviewText] = useState("");
+
+  // Load reviews from local storage when the component mounts
+  useEffect(() => {
+    const storedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    setReviews(storedReviews);
+  }, []);
+
+  // Save reviews to local storage when reviews state changes
+  useEffect(() => {
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+  }, [reviews]);
 
   // Handle rating change
   const ratingChanged = (newRating) => {
@@ -83,5 +94,3 @@ const RatingsAndReviews = () => {
 };
 
 export default RatingsAndReviews;
-
-

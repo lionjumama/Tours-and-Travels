@@ -41,6 +41,8 @@ const Register = () => {
   
       const result = await response.json();
       if (response.ok) {
+        
+        console.log('res data',result);
         alert('Registration successful');
         navigate('/'); // Redirect to home page on success
       } else {

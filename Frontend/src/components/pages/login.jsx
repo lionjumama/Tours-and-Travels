@@ -28,6 +28,7 @@ const Login = () => {
 
       const result = await response.json();
       if (response.ok) {
+        console.log('response ',result);
         alert('Login successful');
         navigate('/'); // Redirect to home page on success
       } else {

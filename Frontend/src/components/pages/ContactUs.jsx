@@ -4,10 +4,11 @@ const ContactUs = () => {
   const [email, setEmail] = useState('');
   const [issue, setIssue] = useState('');
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('http://localhost:2169/api/form/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

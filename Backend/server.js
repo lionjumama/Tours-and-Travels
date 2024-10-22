@@ -2,7 +2,7 @@ const express = require('express');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const authRoutes = require('./Routers/authRoutes');
-const emailRoutes = require('./Controller/email');
+const emailRoute = require("./Routers/api");
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
@@ -26,7 +26,8 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/email', emailRoutes); // Ensure correct path for email routes
+app.use("/api/form",emailRoute);
+ // Ensure correct path for email routes
 
 // Root route
 app.get('/', (req, res) => {
