@@ -28,6 +28,7 @@ const Login = ({ setIsLoggedIn }) => {  // Accepting setIsLoggedIn as a prop
 
       const result = await response.json();
       if (response.ok) {
+        console.log('response ',result);
         alert('Login successful');
         setIsLoggedIn(true);  // Update the login state to true
         navigate('/'); // Redirect to home page on success
