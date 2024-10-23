@@ -9,6 +9,10 @@ const Header = ({ isLoggedIn }) => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false); // Close the menu when a link is clicked
+  };
+
   return (
     <>
       <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
@@ -87,7 +91,11 @@ const Header = ({ isLoggedIn }) => {
               )}
 
               {/* Hamburger Menu for All Screens */}
-              <button onClick={handleMenuToggle} className="text-gray-700 focus:outline-none">
+              <button 
+                onClick={handleMenuToggle} 
+                className="text-gray-700 focus:outline-none" 
+                aria-label="Toggle Menu"
+              >
                 <FaBars className="h-6 w-6" />
               </button>
             </div>
@@ -99,15 +107,15 @@ const Header = ({ isLoggedIn }) => {
       {isMenuOpen && (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex justify-end">
           <div className="w-64 bg-gray-800 text-white p-4 relative">
-            <button onClick={handleMenuToggle} className="absolute top-4 right-4 text-white">
+            <button onClick={handleMenuToggle} className="absolute top-4 right-4 text-white" aria-label="Close Menu">
               <FaTimes className="h-6 w-6" />
             </button>
             <div className="flex flex-col space-y-4">
-              <NavLink to="/login" className="text-white hover:text-blue-400">Login</NavLink>
-              <NavLink to="/register" className="text-white hover:text-blue-400">Register</NavLink>
-              <NavLink to="/tours" className="text-white hover:text-blue-400">Tours</NavLink>
-              <NavLink to="/contact" className="text-white hover:text-blue-400">Contact Us</NavLink>
-              <NavLink to="/specialoffers" className="text-white hover:text-blue-400">Special Offers</NavLink>
+              <NavLink to="/login" className="text-white hover:text-blue-400" onClick={closeMenu}>Login</NavLink>
+              <NavLink to="/register" className="text-white hover:text-blue-400" onClick={closeMenu}>Register</NavLink>
+              <NavLink to="/tours" className="text-white hover:text-blue-400" onClick={closeMenu}>Tours</NavLink>
+              <NavLink to="/contact" className="text-white hover:text-blue-400" onClick={closeMenu}>Contact Us</NavLink>
+              <NavLink to="/specialoffers" className="text-white hover:text-blue-400" onClick={closeMenu}>Special Offers</NavLink>
             </div>
           </div>
         </div>
@@ -117,6 +125,9 @@ const Header = ({ isLoggedIn }) => {
 };
 
 export default Header;
+
+
+
 
 
 

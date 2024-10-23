@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({ setIsLoggedIn }) => {  // Accepting setIsLoggedIn as a prop
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -29,6 +29,7 @@ const Login = () => {
       const result = await response.json();
       if (response.ok) {
         alert('Login successful');
+        setIsLoggedIn(true);  // Update the login state to true
         navigate('/'); // Redirect to home page on success
       } else {
         setErrorMessage(result.message || 'Login failed');

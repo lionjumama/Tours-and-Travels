@@ -1,15 +1,14 @@
 import React from 'react';
-import Body from '../Body'
-import Header from '../Header'
+import Body from '../Body';
+import Header from '../Header';
 
-const Home = () => {
+const Home = ({ isLoggedIn }) => { // Accept isLoggedIn as prop
   return (
     <div> 
+        <Header isLoggedIn={isLoggedIn} /> {/* Pass it to Header */}
         <Body />
-        <Header />
-        
-      </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Home
+export default Home;
